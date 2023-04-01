@@ -38,15 +38,16 @@ public class Colegio {
 	}
 	
 	public void asignaAsientos(Alumno alumno) {
-		boolean asignado = false;
-		for (Aula aula : aulas) {
+		boolean asignado = false; // Controla que el alumno se haya podido sentar
+		for (Aula aula : aulas) { // Ver los asientos por cada aula --> 3 asientos/aula
 			int numAsiento = 0;
-			for (Alumno asiento : aula.getAsientos()) {
+			for (Alumno asiento : aula.getAsientos()) { // Por cada asiento dentro del aula mira si hay alguien sentado
 				numAsiento++;
-				if (asiento == null) {
+				if (asiento == null) { // null quiere decir que el asiento no está asignado
 					asiento = alumno;
 					asignado = true;
 					System.out.println("El alumno " + alumno.getNombre() + " con DNI: " + alumno.getDni() + ", está sentado en el asiento " + numAsiento + " del aula " + aula.getNumero());
+					++numAsiento;
 					break;
 				}
 			}
@@ -56,7 +57,7 @@ public class Colegio {
 				break;
 			}
 		}
-		if (asignado == false) {
+		if (asignado == false) { // El alumno no entra
 			System.out.println("Ya no hay hueco en el colegio");
 		}
 	}

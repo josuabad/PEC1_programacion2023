@@ -2,24 +2,16 @@ package edu.ucjc.programacion.pec1.josu_abad_otano;
 
 public class Aula {
 
-	private int numero;
+	private int numero = 1;
 	private int planta;
 	private Profesor profesor;
-	private Alumno[] asientos = new Alumno[3];
+	private Alumno[] asientos = new Alumno[3]; // Los asientos son arrays de 3 alumnos
 	
 	public Aula(int numero, int planta, Profesor profesor) {
 		super();
 		this.numero = numero;
 		this.planta = planta;
 		this.profesor = profesor;
-	}
-
-	public Aula(int numero, int planta, Profesor profesor, Alumno[] asientos) {
-		super();
-		this.numero = numero;
-		this.planta = planta;
-		this.profesor = profesor;
-		this.asientos = asientos;
 	}
 
 	public double getNumero() {

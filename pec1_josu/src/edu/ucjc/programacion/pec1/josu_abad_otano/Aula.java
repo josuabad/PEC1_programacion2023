@@ -2,7 +2,7 @@ package edu.ucjc.programacion.pec1.josu_abad_otano;
 
 public class Aula {
 
-	private int numero = 1;
+	private int numero;
 	private int planta;
 	private Profesor profesor;
 	private Alumno[] asientos = new Alumno[3]; // Los asientos son arrays de 3 alumnos
